@@ -5,12 +5,13 @@ const button = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
 
 function changeBGColor(event) {
-  const selectedTask = document.getElementsByClassName('new-task')
+  const selectedTask = document.getElementsByClassName('new-task');
   for (let index = 0; index < selectedTask.length; index += 1) {
     selectedTask[index].classList.remove('new-task');
   }
-  event.target.classList.add('selected');
-  event.target.style.backgroundColor = 'gray';
+  const evt = event;
+  evt.target.classList.add('selected');
+  evt.target.style.backgroundColor = 'gray';
 }
 
 function newListElement() {
@@ -24,8 +25,4 @@ function newListElement() {
 
 button.addEventListener('click', newListElement);
 
-// 7
-
-
-
-
+// 8

@@ -17,17 +17,23 @@ function changeBGColor(event) {
   evt.target.classList.add('selected');
 }
 
+function lineThrough(event) {
+  const mimi = event;
+  mimi.target.classList.toggle('completed');
+}
+
+//
+
 function newListElement() {
   const newTask = document.createElement('li');
   newTask.innerHTML = input.value;
   newTask.classList.add('new-task');
   ol.appendChild(newTask);
   newTask.addEventListener('click', changeBGColor);
+  newTask.addEventListener('dblclick', lineThrough);
   input.value = '';
 }
 
 button.addEventListener('click', newListElement);
 
 // 9
-
-

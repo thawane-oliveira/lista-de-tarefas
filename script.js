@@ -3,6 +3,7 @@
 const input = document.querySelector('#texto-tarefa');
 const button = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
+const cleanButton = document.querySelector('#apaga-tudo');
 
 function changeBGColor(event) {
   const newTask = document.querySelectorAll('.new-task');
@@ -36,4 +37,13 @@ function newListElement() {
 
 button.addEventListener('click', newListElement);
 
-// 9
+// 10
+
+function cleanList() {
+  const list = document.querySelectorAll('#lista-tarefas');
+  for (let index = 0; index < list.length; index += 1) {
+    list[index].innerHTML = '';
+  }
+}
+
+cleanButton.addEventListener('click', cleanList);

@@ -4,6 +4,7 @@ const input = document.querySelector('#texto-tarefa');
 const button = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
 const cleanButton = document.querySelector('#apaga-tudo');
+const buttonRemoveFinished = document.querySelector('#remover-finalizados');
 
 function changeBGColor(event) {
   const newTask = document.querySelectorAll('.new-task');
@@ -37,13 +38,24 @@ function newListElement() {
 
 button.addEventListener('click', newListElement);
 
-// 10
+//
 
 function cleanList() {
   const list = document.querySelectorAll('#lista-tarefas');
   for (let index = 0; index < list.length; index += 1) {
-    list[index].innerHTML = '';
+    list[index].innerText = '';
   }
 }
 
 cleanButton.addEventListener('click', cleanList);
+
+//
+
+function cleanFinished() {
+  const alreadyFinished = document.querySelectorAll('.completed');
+  for (let index = 0; index < alreadyFinished.length; index += 1) {
+    alreadyFinished[index].remove();
+  }
+}
+
+buttonRemoveFinished.addEventListener('click', cleanFinished);

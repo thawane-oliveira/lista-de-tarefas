@@ -9,11 +9,16 @@ const saveButton = document.querySelector('#salvar-tarefas');
 const upButton = document.querySelector('#mover-cima');
 const downButton = document.querySelector('#mover-baixo');
 const buttonRemoveSelected = document.querySelector('#remover-selecionado');
+const recoveredTasks = localStorage.getItem('tasks');
 
 window.onload = () => {
-  const recoveredTasks = localStorage.getItem('tasks');
   if (recoveredTasks) {
     ol.innerHTML = recoveredTasks;
+    const recoveredTasks2 = document.querySelectorAll('.new-task');
+    for (let task of recoveredTasks2) {
+      task.addEventListener('click', changeBGColor);
+      task.addEventListener('dblclick', lineThrough);
+    }
   }
 };
 
@@ -82,11 +87,8 @@ saveButton.addEventListener('click', saveTasks);
 //
 
 function upTask() {
-  for (let index = 0; index < ol.children.length; index += 1) {
-    if (ol.children[index].classList.contains('selected')) {
-      ol.children[index]
-    }
-  }
+  const selecionados = document.querySelector('.selected');
+  const nextSibling = document.querySelector('.selected').nextElementSibling;
 }
 // previousSibling, nextSibling, se ja for firstchild n pode e down se for lastchild n pode;
 

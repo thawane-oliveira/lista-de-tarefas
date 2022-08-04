@@ -9,3 +9,49 @@
 .completed {
   text-decoration: line-through solid black;
 }
+
+body , button {
+  font-family : Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  background-color: beige;
+}
+
+h1 {
+  background-color: rgb(235 , 207 , 196);
+  color: rgb(209 , 136 , 140);
+  height: 50px;
+  width: 350px;
+  text-align: center;
+  border: 2px aliceblue dashed;
+  padding-top: 5px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: pink;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+button {
+  background-color: rgb(244 , 217 , 208);
+  font-family: monospace;
+  border-style: ridge;
+  color: rgb(204 , 98 , 104);
+}
+
+input {
+  border: 1px brown dashed;
+  width: 400px;
+  height: 20px;
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  margin-left: 39%;
+  margin-right: 39%;
+}
+
+#funcionamento {
+  width: 500px;
+  margin-left: 38%;
+  margin-right: 38%;
+}
+
+#botoes {
+  margin-left: 300px;
+  display: inline-block;
+}

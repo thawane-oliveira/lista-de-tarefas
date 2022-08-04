@@ -5,6 +5,14 @@ const button = document.querySelector('#criar-tarefa');
 const ol = document.querySelector('#lista-tarefas');
 const cleanButton = document.querySelector('#apaga-tudo');
 const buttonRemoveFinished = document.querySelector('#remover-finalizados');
+const saveButton = document.querySelector('#salvar-tarefas');
+
+window.onload = () => {
+  const recoveredTasks = localStorage.getItem('tasks');
+  if (recoveredTasks) {
+    ol.innerHTML = recoveredTasks;
+  }
+};
 
 function changeBGColor(event) {
   const newTask = document.querySelectorAll('.new-task');
@@ -59,3 +67,12 @@ function cleanFinished() {
 }
 
 buttonRemoveFinished.addEventListener('click', cleanFinished);
+
+//
+
+function saveTasks() {
+  // const tasks = document.querySelectorAll('#lista-tarefas');
+  localStorage.setItem('tasks', ol.innerHTML);
+}
+
+saveButton.addEventListener('click', saveTasks);

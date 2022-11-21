@@ -15,7 +15,7 @@ window.onload = () => {
   if (recoveredTasks) {
     ol.innerHTML = recoveredTasks;
     const recoveredTasks2 = document.querySelectorAll('.new-task');
-    for (let task of recoveredTasks2) {
+    for (const task of recoveredTasks2) {
       task.addEventListener('click', changeBGColor);
       task.addEventListener('dblclick', lineThrough);
     }
@@ -86,21 +86,21 @@ saveButton.addEventListener('click', saveTasks);
 
 //
 
-function upTask() {
-  const selecionados = document.querySelector('.selected');
-  const nextSibling = document.querySelector('.selected').nextElementSibling;
-}
-// previousSibling, nextSibling, se ja for firstchild n pode e down se for lastchild n pode;
+// function upTask() {
+//   const selecionados = document.querySelector('.selected');
+//   const nextSibling = document.querySelector('.selected').nextElementSibling;
+// }
+// // previousSibling, nextSibling, se ja for firstchild n pode e down se for lastchild n pode;
 
-upButton.addEventListener('click', upTask);
+// upButton.addEventListener('click', upTask);
 
-//
+// //
 
-function downTask() {
+// function downTask() {
 
-}
+// }
 
-downButton.addEventListener('click', downTask);
+// downButton.addEventListener('click', downTask);
 
 //
 
